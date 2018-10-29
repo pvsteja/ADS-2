@@ -1,9 +1,5 @@
 Starting audit...
 [ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:11: First sentence should end with a period. [JavadocStyle]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:22: Line is longer than 80 characters (found 90). [LineLength]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:27: switch without "default" clause. [MissingSwitchDefault]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:36: Line is longer than 80 characters (found 93). [LineLength]
+[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:28: switch without "default" clause. [MissingSwitchDefault]
 Audit done.
-Checkstyle ends with 6 errors.
+Checkstyle ends with 2 errors.
