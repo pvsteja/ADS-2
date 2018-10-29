@@ -16,8 +16,8 @@ public final class Solution {
     public static void main(final String[] args) {
         Scanner scan = new Scanner(System.in);
         String type = scan.nextLine();
-        int vertices = scan.nextInt();
-        int edges = scan.nextInt();
+        int v = scan.nextInt();
+        int e = scan.nextInt();
         scan.nextLine();
         LinearProbingHashST<Integer, String> hashst = new
         LinearProbingHashST<>();
@@ -27,7 +27,7 @@ public final class Solution {
         }
         switch (type) {
         case "List":
-            Graph graph = new Graph(vertices);
+            Graph graph = new Graph(v);
             while (scan.hasNext()) {
                 String[] tokens = scan.nextLine().split(" ");
                 graph.addEdge(Integer.parseInt(tokens[0]
@@ -35,9 +35,9 @@ public final class Solution {
             }
 
             System.out.println(
-              graph.V() + " vertices, " + graph.E() + " edges");
+              graph.V() + " v, " + graph.E() + " e");
             if (graph.E() == 0) {
-                System.out.println("No edges");
+                System.out.println("No e");
                 break;
             }
             for (int i = 0; i < graph.V(); i++) {
