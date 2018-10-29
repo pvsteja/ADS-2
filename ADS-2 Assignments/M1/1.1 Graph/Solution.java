@@ -1,12 +1,19 @@
 import java.util.Scanner;
-/**.
- * class for Solution
+/** . class for Solution
  */
 public final class Solution {
+	/**
+	 * Constructs the object.
+	 */
 	private Solution() {
 
 	}
-	public static void main(String[] args) {
+	/**
+	 * { function_description }
+	 *
+	 * @param      args  The arguments
+	 */
+	public static void main(final String[] args) {
 		Scanner scan = new Scanner(System.in);
 		String type = scan.nextLine();
 		int vertices = scan.nextInt();
@@ -22,7 +29,8 @@ public final class Solution {
 			Graph graph = new Graph(vertices);
 			while (scan.hasNext()) {
 				String[] tokens = scan.nextLine().split(" ");
-				graph.addEdge(Integer.parseInt(tokens[0]), Integer.parseInt(tokens[1]));
+				graph.addEdge(Integer.parseInt(tokens[0]
+					), Integer.parseInt(tokens[1]));
 			}
 
 			System.out.println(graph.V() + " vertices, " + graph.E() + " edges");
@@ -38,11 +46,6 @@ public final class Solution {
 				}
 				System.out.println(str.toString());
 			}
-
 		}
-		//System.out.println(type);
-
 	}
-
-
 }
