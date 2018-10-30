@@ -1,5 +1,4 @@
 Starting audit...
 [ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] C:\Users\Teja\Desktop\MSIT\1st Year\ADS-2\ADS-2 Assignments\M1\1.1 Graph\Solution.java:28: switch without "default" clause. [MissingSwitchDefault]
 Audit done.
-Checkstyle ends with 2 errors.
+Checkstyle ends with 1 errors.
