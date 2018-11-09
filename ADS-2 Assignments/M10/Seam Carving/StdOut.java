@@ -42,12 +42,12 @@ import java.util.Locale;
  *  but there are a few technical differences:
  *  <ul>
  *  <li> {@code StdOut} coerces the character-set encoding to UTF-8,
- *       which is a standard character encoding for Unicode.
+ *  which is a standard character encoding for Unicode.
  *  <li> {@code StdOut} coerces the locale to {@link Locale#US},
- *       for consistency with {@link StdIn}, {@link Double#parseDouble(String)},
- *       and floating-point literals.
+ *  for consistency with {@link StdIn}, {@link Double#parseDouble(String)},
+ *  and floating-point literals.
  *  <li> {@code StdOut} <em>flushes</em> standard output after each call to
- *       {@code print()} so that text will appear immediately in the terminal.
+ *  {@code print()} so that text will appear immediately in the terminal.
  *  </ul>
  *  <p>
  *  <b>Reference.</b>
@@ -73,7 +73,8 @@ public final class StdOut {
     // this is called before invoking any methods
     static {
         try {
-            out = new PrintWriter(new OutputStreamWriter(System.out, CHARSET_NAME), true);
+            out = new PrintWriter(new OutputStreamWriter(
+                System.out, CHARSET_NAME), true);
         }
         catch (UnsupportedEncodingException e) {
             System.out.println(e);
@@ -86,8 +87,8 @@ public final class StdOut {
    /**
      * Closes standard output.
      * @deprecated Calling close() permanently disables standard output;
-     *             subsequent calls to StdOut.println() or System.out.println()
-     *             will no longer produce output on standard output.
+     *subsequent calls to StdOut.println() or System.out.println()
+     *will no longer produce output on standard output.
      */
     @Deprecated
     public static void close() {
@@ -193,7 +194,7 @@ public final class StdOut {
 
    /**
      * Prints an object to standard output and flushes standard output.
-     * 
+     *
      * @param x the object to print
      */
     public static void print(Object x) {
@@ -203,7 +204,7 @@ public final class StdOut {
 
    /**
      * Prints a boolean to standard output and flushes standard output.
-     * 
+     *
      * @param x the boolean to print
      */
     public static void print(boolean x) {
@@ -213,7 +214,7 @@ public final class StdOut {
 
    /**
      * Prints a character to standard output and flushes standard output.
-     * 
+     *
      * @param x the character to print
      */
     public static void print(char x) {
@@ -223,7 +224,7 @@ public final class StdOut {
 
    /**
      * Prints a double to standard output and flushes standard output.
-     * 
+     *
      * @param x the double to print
      */
     public static void print(double x) {
@@ -233,7 +234,7 @@ public final class StdOut {
 
    /**
      * Prints a float to standard output and flushes standard output.
-     * 
+     *
      * @param x the float to print
      */
     public static void print(float x) {
@@ -243,7 +244,7 @@ public final class StdOut {
 
    /**
      * Prints an integer to standard output and flushes standard output.
-     * 
+     *
      * @param x the integer to print
      */
     public static void print(int x) {
@@ -253,7 +254,7 @@ public final class StdOut {
 
    /**
      * Prints a long integer to standard output and flushes standard output.
-     * 
+     *
      * @param x the long integer to print
      */
     public static void print(long x) {
@@ -263,7 +264,7 @@ public final class StdOut {
 
    /**
      * Prints a short integer to standard output and flushes standard output.
-     * 
+     *
      * @param x the short integer to print
      */
     public static void print(short x) {
