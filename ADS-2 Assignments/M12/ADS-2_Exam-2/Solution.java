@@ -1,7 +1,14 @@
 import java.util.ArrayList;
 import java.util.Scanner;
+/**
+ * Class for solution.
+ */
 public class Solution {
-
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         // Self loops are not allowed...
         // Parallel Edges are allowed...
@@ -29,15 +36,15 @@ public class Solution {
 
         case "DirectedPaths":
             // Handle the case of DirectedPaths, where two integers are given.
-            // First is the source and second is the destination.
+            // First is the src and second is the destination.
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
             String[] inputs = scan.nextLine().split(" ");
-            int source = Integer.parseInt(inputs[0]);
-            int dest = Integer.parseInt(inputs[1]);
-            DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(ewg, source);
-            if (dusp.hasPathTo(dest)) {
-                System.out.println(dusp.distTo(dest));
+            int src = Integer.parseInt(inputs[0]);
+            int dist = Integer.parseInt(inputs[1]);
+            DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(ewg, src);
+            if (dusp.hasPathTo(dist)) {
+                System.out.println(dusp.distTo(dist));
             } else {
                 System.out.println("No Path Found.");
             }
@@ -51,12 +58,12 @@ public class Solution {
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
             String[] input = scan.nextLine().split(" ");
-            int src = Integer.parseInt(input[0]);
+            int src1 = Integer.parseInt(input[0]);
             int via = Integer.parseInt(input[1]);
-            int dst = Integer.parseInt(input[2]);
-            DijkstraUndirectedSP dusp1 = new DijkstraUndirectedSP(ewg, src);
-            if (dusp1.hasPathTo(dst)) {
-                for (Edge onPath: dusp1.pathTo(dst)) {
+            int dist1 = Integer.parseInt(input[2]);
+            DijkstraUndirectedSP dusp1 = new DijkstraUndirectedSP(ewg, src1);
+            if (dusp1.hasPathTo(dist1)) {
+                for (Edge onPath: dusp1.pathTo(dist1)) {
                     System.out.println(onPath);
                 }
             } else {
