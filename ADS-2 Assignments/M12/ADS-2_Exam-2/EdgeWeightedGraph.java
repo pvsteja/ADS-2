@@ -111,18 +111,18 @@ public class EdgeWeightedGraph {
      * number of edges <em>E</em>,
      *         followed by the <em>V</em> adjacency lists of edges
      */
-    public String toString() {
-        StringBuilder s = new StringBuilder();
-        s.append(vertices + " vertices " + edges + " edges" + "\n");
-        for (int v = 0; v < vertices; v++) {
-            s.append(v + ": ");
-            for (Edge e : adj[v]) {
-                s.append(e + "  ");
-            }
-            s.append("\n");
-        }
-        return s.toString();
-    }
+    // public String toString() {
+    //     StringBuilder s = new StringBuilder();
+    //     s.append(vertices + " vertices " + edges + " edges" + "\n");
+    //     for (int v = 0; v < vertices; v++) {
+    //         s.append(v + ": ");
+    //         for (Edge e : adj[v]) {
+    //             s.append(e + "  ");
+    //         }
+    //         s.append("\n");
+    //     }
+    //     return s.toString();
+    // }
 
 
 }
