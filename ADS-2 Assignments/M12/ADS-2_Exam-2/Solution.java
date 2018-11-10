@@ -16,18 +16,21 @@ public class Solution {
         Scanner scan = new Scanner(System.in);
         int vertices = Integer.parseInt(scan.nextLine());
         int edges = Integer.parseInt(scan.nextLine());
+        // time complexity for adding in EdgeWeightedGraph is 1(constant).
         EdgeWeightedGraph ewg = new EdgeWeightedGraph(vertices);
         for (int i = 0; i < edges; i++) {
           String[] inputs = scan.nextLine().split(" ");
           int v = Integer.parseInt(inputs[0]);
           int w = Integer.parseInt(inputs[1]);
           double wt = Double.parseDouble(inputs[2]);
+          //time complexity for edge is 1(constant).
           Edge e = new Edge(v, w, wt);
           ewg.addEdge(e);
         }
         String caseToGo = scan.nextLine();
         switch (caseToGo) {
         case "Graph":
+        //time complexity for Graph is E+V.
           System.out.println(ewg);
           break;
         case "DirectedPaths":
@@ -38,7 +41,7 @@ public class Solution {
             String[] inputs = scan.nextLine().split(" ");
             int src = Integer.parseInt(inputs[0]);
             int dist = Integer.parseInt(inputs[1]);
-            //complexities for DijkstraUndirectedSP is E+V.
+            //complexities for DijkstraUndirectedSP is ElogV.
             DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(ewg, src);
             if (dusp.hasPathTo(dist)) {
                 System.out.println(dusp.distTo(dist));
@@ -54,6 +57,7 @@ public class Solution {
             // third is the destination.
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
+            // time complexities for viapath is 2V.
             String[] input = scan.nextLine().split(" ");
             int src1 = Integer.parseInt(input[0]);
             int via = Integer.parseInt(input[1]);
