@@ -10,21 +10,21 @@ public class Solution {
 
         int vertices = Integer.parseInt(scan.nextLine());
         int edges = Integer.parseInt(scan.nextLine());
-        EdgeWeightedGraph eg = new EdgeWeightedGraph(vertices);
+        EdgeWeightedGraph ewg = new EdgeWeightedGraph(vertices);
 
         for (int i = 0; i < edges; i++) {
           String[] inputs = scan.nextLine().split(" ");
           int v = Integer.parseInt(inputs[0]);
           int w = Integer.parseInt(inputs[1]);
-          double wght = Double.parseDouble(inputs[2]);
-          Edge e = new Edge(v, w, wght);
-          eg.addEdge(e);
+          double wt = Double.parseDouble(inputs[2]);
+          Edge e = new Edge(v, w, wt);
+          ewg.addEdge(e);
         }
 
         String caseToGo = scan.nextLine();
         switch (caseToGo) {
         case "Graph":
-          System.out.println(eg);
+          System.out.println(ewg);
           break;
 
         case "DirectedPaths":
@@ -35,7 +35,7 @@ public class Solution {
             String[] inputs = scan.nextLine().split(" ");
             int source = Integer.parseInt(inputs[0]);
             int dest = Integer.parseInt(inputs[1]);
-            DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(eg, source);
+            DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(ewg, source);
             if (dusp.hasPathTo(dest)) {
                 System.out.println(dusp.distTo(dest));
             } else {
@@ -45,7 +45,8 @@ public class Solution {
 
         case "ViaPaths":
             // Handle the case of ViaPaths, where three integers are given.
-            // First is the source and second is the via is the one where path should pass throuh.
+            // First is the source and second is the via is the one
+            // where path should pass throuh.
             // third is the destination.
             // If the path exists print the distance between them.
             // Other wise print "No Path Found."
@@ -53,7 +54,7 @@ public class Solution {
             int src = Integer.parseInt(input[0]);
             int via = Integer.parseInt(input[1]);
             int dst = Integer.parseInt(input[2]);
-            DijkstraUndirectedSP dusp1 = new DijkstraUndirectedSP(eg, src);
+            DijkstraUndirectedSP dusp1 = new DijkstraUndirectedSP(ewg, src);
             if (dusp1.hasPathTo(dst)) {
                 for (Edge onPath: dusp1.pathTo(dst)) {
                     System.out.println(onPath);
