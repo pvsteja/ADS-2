@@ -38,6 +38,7 @@ public class Solution {
             String[] inputs = scan.nextLine().split(" ");
             int src = Integer.parseInt(inputs[0]);
             int dist = Integer.parseInt(inputs[1]);
+            //complexities for DijkstraUndirectedSP is E+V.
             DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(ewg, src);
             if (dusp.hasPathTo(dist)) {
                 System.out.println(dusp.distTo(dist));
@@ -60,7 +61,7 @@ public class Solution {
             DijkstraUndirectedSP dusp1 = new DijkstraUndirectedSP(ewg, src1);
             if (dusp1.hasPathTo(dist1)) {
                 for (Edge onPath: dusp1.pathTo(dist1)) {
-                    System.out.println(onPath);
+                    System.out.println("Path is there");
                 }
             } else {
                 System.out.println("No Path Found.");
