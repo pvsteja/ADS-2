@@ -11,6 +11,7 @@ public class LSD {
      * @param a the array to be sorted
      * @param w the number of characters per string
      */
+   //Time complexity of LSD is N
     public static void sort(String[] a, int w) {
         int n = a.length;
         int R = 256;   // extend ASCII alphabet size
@@ -38,6 +39,9 @@ public class LSD {
             output = a;
         }
     }
+    //time complexity for toString NW
+    // N means number of elements in String array.
+    // W means leangth of the string.
         public String toString() {
             String s = "[";
             for (int i = 0; i < output.length - 1; i++) {
