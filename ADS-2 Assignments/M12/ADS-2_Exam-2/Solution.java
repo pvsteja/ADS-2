@@ -44,9 +44,9 @@ public class Solution {
             //complexities for DijkstraUndirectedSP is ElogV.
             DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(ewg, src);
             if (dusp.hasPathTo(dist)) {
-                for (Edge e: dusp.pathTo(dist) ) {
+                // for (Edge e: dusp.pathTo(dist) ) {
                     System.out.println(dusp.distTo(dist));
-                }
+                // }
             } else {
                 System.out.println("No Path Found.");
             }
