@@ -45,7 +45,7 @@ public class Solution {
             DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(ewg, src);
             if (dusp.hasPathTo(dist)) {
                 for (Edge e: dusp.pathTo(dist) ) {
-                    System.out.println("edge");
+                    System.out.println(dusp.distTo(dist));
                 }
             } else {
                 System.out.println("No Path Found.");
@@ -67,7 +67,7 @@ public class Solution {
             DijkstraUndirectedSP dusp1 = new DijkstraUndirectedSP(ewg, src1);
             if (dusp1.hasPathTo(dist1)) {
                 for (Edge e: dusp1.pathTo(dist1)) {
-                    System.out.println("edge");
+                    System.out.println(dusp1.distTo(dist1));
                 }
             } else {
                 System.out.println("No Path Found.");
