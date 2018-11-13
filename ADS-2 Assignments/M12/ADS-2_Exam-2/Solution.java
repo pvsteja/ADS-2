@@ -64,8 +64,8 @@ public class Solution {
             int dist1 = Integer.parseInt(input[2]);
             DijkstraUndirectedSP dusp1 = new DijkstraUndirectedSP(ewg, src1);
             if (dusp1.hasPathTo(dist1)) {
-                for (Edge onPath: dusp1.pathTo(dist1)) {
-                    System.out.println("Path is there");
+                for (Edge e: dusp1.pathTo(dist1)) {
+                    System.out.println("edge");
                 }
             } else {
                 System.out.println("No Path Found.");
