@@ -40,13 +40,13 @@ public class Solution {
             // Other wise print "No Path Found."
             String[] inputs = scan.nextLine().split(" ");
             int src = Integer.parseInt(inputs[0]);
-            int dist = Integer.parseInt(inputs[1]);
+            int dest = Integer.parseInt(inputs[1]);
             //complexities for DijkstraUndirectedSP is ElogV.
             DijkstraUndirectedSP dusp = new DijkstraUndirectedSP(ewg, src);
-            if (dusp.hasPathTo(dist)) {
-                // for (Edge e: dusp.pathTo(dist) ) {
-                    System.out.println(dusp.distTo(dist));
-                // }
+            if (dusp.hasPathTo(dest)) {
+                for (Edge e: dusp.pathTo(dest) ) {
+                    System.out.println(e);
+                }
             } else {
                 System.out.println("No Path Found.");
             }
