@@ -1,16 +1,16 @@
 
 import java.util.Scanner;
-/**
+/**.
  * Class for solution.
  */
 public class Solution {
-    /**
+    /**.
      * Constructs the object for solution.
      */
     protected Solution() {
         //default constructor.
     }
-    /**
+    /**.
      * main method to find Substring matches from the given file.
      *
      * @param      args  The arguments
@@ -30,7 +30,7 @@ public class Solution {
             System.out.println(word);
         }
     }
-    /**
+    /**.
      * Loads words.
      *
      * @return     { description_of_the_return_value }
