@@ -1,13 +1,13 @@
 import java.util.Scanner;
-/**
+/**.
  * Class for solution.
  */
 public final class Solution {
-  /**
+  /**.
    * Don't modify this method.
   */
 
-  /**
+  /**.
    * main function to handle testcases.
    *
    * @param      args  The arguments
@@ -86,11 +86,11 @@ public final class Solution {
 
     }
   }
-  /**
+  /**.
    * Don't modify this method.
    */
 
-  /**
+  /**.
    * reads the file.
    *
    * @param      file  The file
@@ -101,12 +101,12 @@ public final class Solution {
     In in = new In(file);
     return in.readAllStrings();
   }
-  /**
+  /**.
    * Loads a dictionary.
    *
    * @param      file  The file
    *
-   * @return     dictionary.
+   * @return     { description_of_the_return_value }
    */
   public static BinarySearchST<String, Integer> loadDictionary(final
       String file) {
@@ -125,15 +125,15 @@ public final class Solution {
   }
 
 }
-/**
+/**.
  * Class for t 9.
  */
 class T9 {
-  /**
+  /**.
    * private TST object.
    */
   private TST<Integer> words;
-  /**
+  /**.
    * Constructs the object.
    *
    * @param      st    symbol table.
@@ -148,7 +148,7 @@ class T9 {
     }
   }
 
-  /**
+  /**.
    * Gets all words.
    *
    * @param      prefix  The prefix
@@ -159,7 +159,7 @@ class T9 {
     // your code goes here
     return words.keysWithPrefix(prefix);
   }
-  /**
+  /**.
    * checks for potential words.
    *
    * @param      t9Signature  The t 9 signature
@@ -173,7 +173,7 @@ class T9 {
 
   // return all possibilities(words), find top k with highest frequency.
 
-  /**
+  /**.
    * Gets the suggestions.
    *
    * @param      words  The words
@@ -190,7 +190,7 @@ class T9 {
   // final output
   // Don't modify this method.
 
-  /**
+  /**.
    * t9 dictionary.
    *
    * @param      t9Signature  The t 9 signature
